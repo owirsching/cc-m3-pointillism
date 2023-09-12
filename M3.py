@@ -1,7 +1,6 @@
 from random import randint
 import time
 from turtle import *
-
 import numpy as np
 
 PALETTE = {
@@ -16,11 +15,6 @@ PALETTE = {
     "orange": "#D27E20",
     "yellow": "#DF9D39"
 }
-
-SIZES = {"small": (1,1),
-         "medium": (2,1),
-         "large": (3,1.5)
-        }
 
 class Painter:
     def __init__(self, transition_matrix, size_matrix):
@@ -42,6 +36,7 @@ class Painter:
         )
 
 def main():
+    # Initialize our painter 
     painter = Painter(transition_matrix={
         "light_blue": {"light_blue": 0.05, "medium_blue": 0.2, "dark_blue": 0.3, "teal": 0.05, "purple": 0.1, "dusty_pink": 0.025, "green": 0.1, "taupe": 0.025, "orange": 0.05, "yellow": 0.1},
         "medium_blue":  {"light_blue": 0.2, "medium_blue": 0.1, "dark_blue": 0.025, "teal": 0.3, "purple": 0.05, "dusty_pink": 0.05, "green": 0.05, "taupe": 0.1, "orange": 0.1, "yellow": 0.025},
@@ -59,34 +54,49 @@ def main():
         "large":  {"small": 0.3, "medium": 0.6, "large": 0.1}
     })
     
+    # Start with paint color taupe and paintbrush size small 
     current_color="taupe"
     current_size="small"
-    for x in range (0,100):
-        pos = (randint(-150,150), randint(-150,150))
-        direction = 0
+
+    # For 100 Flowers
+    for _ in range (0,100):
+        # Pick a paintbrush size
         size = painter.get_next_size(current_size)
         current_size = size
-        for y in range(0, 9):
+
+        # Choose a random position on the canvas
+        pos = (randint(-150,150), randint(-150,150))   
+        direction = 0
+        
+        # For 9 paintstrokes
+        for _ in range(0, 9):
+            # Initialize the turtle 
             turtle = Turtle()
-            turtle.speed(0)
             turtle.penup()
+            turtle.speed(0)
+            turtle.setpos(pos)
+            direction += 40
+            turtle.left(direction)
+            turtle.fd(10)
+
+            # Choose a new paint color
             color = painter.get_next_color(current_color)
             current_color = color
+            turtle.color(PALETTE[color])
+
+            # Change the paintbrush size to what was selected before
             if size == "small":
                 turtle.shapesize(0.5,0.5)
             elif size == "medium":
                 turtle.shapesize(1,1)
             else: 
                 turtle.shapesize(1.5, 1)
-            turtle.color(PALETTE[color])
-            # turtle.setheading(turtle.towards(0, 0))
-            turtle.setpos(pos)
-            direction += 40
-            turtle.left(direction)
-            turtle.fd(10)
+            
+            # Paint the circles 
             turtle.pendown()
             turtle.shape("circle")
             turtle.penup()
+            
             pos = turtle.pos()
     time.sleep(15)
 
