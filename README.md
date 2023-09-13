@@ -1,4 +1,4 @@
-### Two Markov Chains by the Shore, Mediterranean 
+# Two Markov Chains by the Shore, Mediterranean 
 Computational Creativity Assignment M3. 
 
 ## Original Painting 
@@ -14,9 +14,9 @@ This project generates a pointillist painting inspired by Henri Edmond Cross' "T
 Markov Chains determine which object will be painted next and which colors in the object's color profile will be used for each paint stroke in that object. 
 
 ## Example Created by This System
-![image](./Examples/Example1.png)
+![image](./Examples/Example4.png)
 
-Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 1). 2023, Turtle on Screen. GitHub.
+Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 4). 2023, Turtle on Screen. GitHub.
 
 # How to set up and run the code 
 1. Navigate to the cc-m3-pointillism folder
