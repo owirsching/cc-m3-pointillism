@@ -22,7 +22,10 @@ PALETTE = {
 
 class Painter:
     def __init__(self, object_matrix, object_color_matrix):
-        """Initializes the Painter with an object_matrix, object_color_matrix, and objects"""
+        """
+        Initializes the Painter with an object_matrix, object_color_matrix, and objects
+        Parameters: self (Painter object_matrix (dict), object_color_matrix (dict)
+        """
         # object_matrix: probability that the painter will choose another object based on the current object
         self.object_matrix = object_matrix
        
@@ -33,14 +36,22 @@ class Painter:
 
     
     def get_next_object(self, current_object):
-        """Selects the next object to paint based on the current object using the transition matrix, object_matrix"""
+        """
+        Selects the next object to paint based on the current object using the transition matrix, object_matrix
+        Parameters: self (Painter object), current_object (string)
+        Return: String of an object (sky, ocean, tree, ground, orange_bush, green_bush, yellow_bush)
+        """
         return np.random.choice(
             self.objects,
             p=[self.object_matrix[current_object][next_object] for next_object in self.objects]
         )
     
     def get_next_color(self, current_color, current_object):
-        """Selects the next color to paint based on the current color and the current object using the transition matrix, object_color_matrix"""
+        """
+        Selects the next color to paint based on the current color and the current object using the transition matrix, object_color_matrix
+        Parameters: self (Painter object), current_color (string), current_object (string )
+        Return: String of a color (light_blue, teal, orange, ...)
+        """
         matrix = self.object_color_matrix[current_object]
         keys = list(matrix.keys())
         return np.random.choice(
@@ -49,6 +60,10 @@ class Painter:
         )
     
     def paint(self, current_object):
+        """
+        Paints image on a virtual canvas using turtle
+        Parameters: self (Painter object), current_object (string)
+        """
         # Start with the object as sky
         current_object="sky"
 
@@ -116,9 +131,9 @@ def main():
     object_matrix={
         "tree": {"tree": 0.2, "sky": 0.2, "orange_bush": 0.1, "green_bush": 0.05, "ground": 0.05, "ocean": 0.3, "yellow_bush": 0.1},
         "sky": {"tree": 0.05, "sky": 0.3, "orange_bush": 0.05, "green_bush": 0.1, "ground": 0.3, "ocean": 0.1, "yellow_bush": 0.1},
-        "orange_bush": {"tree": 0.05, "sky": 0.3, "orange_bush": 0.1, "green_bush": 0.05, "ground": 0.2, "ocean": 0.1, "yellow_bush": 0.2},
+        "orange_bush": {"tree": 0.3, "sky": 0.05, "orange_bush": 0.1, "green_bush": 0.05, "ground": 0.2, "ocean": 0.1, "yellow_bush": 0.2},
         "green_bush": {"tree": 0.05, "sky": 0.3, "orange_bush": 0.05, "green_bush": 0.05, "ground": 0.3, "ocean": 0.2, "yellow_bush": 0.05},
-        "yellow_bush": {"tree": 0.05, "sky": 0.2, "orange_bush": 0.05, "green_bush": 0.1, "ground": 0.3, "ocean": 0.2, "yellow_bush": 0.1},
+        "yellow_bush": {"tree": 0.1, "sky": 0.2, "orange_bush": 0.05, "green_bush": 0.05, "ground": 0.3, "ocean": 0.2, "yellow_bush": 0.1},
         "ground": {"tree": 0.3, "sky": 0.2, "orange_bush": 0.1, "green_bush": 0.05, "ground": 0.05, "ocean": 0.1, "yellow_bush": 0.2},
         "ocean": {"tree": 0.05, "sky": 0.3, "orange_bush": 0.05, "green_bush": 0.2, "ground": 0.05, "ocean": 0.3, "yellow_bush": 0.05}        
     },object_color_matrix={
@@ -155,20 +170,20 @@ def main():
     "ground": {
         "dark_blue": {"dark_blue": 0.5, "purple": 0.2, "medium_blue": 0.1, "dark_green": 0.2},
         "purple": {"dark_blue": 0.1, "purple": 0.2, "medium_blue": 0.5, "dark_green": 0.2},
-        "medium_blue": {"dark_blue": 0.5, "purple": 0.2, "medium_blue": 0.2, "dark_green": 0.1},
-        "dark_green": {"dark_blue": 0.5, "purple": 0.1, "medium_blue": 0.2, "dark_green": 0.2},
+        "medium_blue": {"dark_blue": 0.2, "purple": 0.5, "medium_blue": 0.2, "dark_green": 0.1},
+        "dark_green": {"dark_blue": 0.5, "purple": 0.2, "medium_blue": 0.1, "dark_green": 0.2},
         },
     "ocean": {
         "teal": {"teal": 0.5, "light_blue": 0.2, "medium_blue": 0.1, "dark_green": 0.2},
-        "light_blue": {"teal": 0.1, "light_blue": 0.2, "medium_blue": 0.5, "dark_green": 0.2},
-        "medium_blue": {"teal": 0.5, "light_blue": 0.2, "medium_blue": 0.2, "dark_green": 0.1},
+        "light_blue": {"teal": 0.5, "light_blue": 0.2, "medium_blue": 0.1, "dark_green": 0.2},
+        "medium_blue": {"teal": 0.1, "light_blue": 0.2, "medium_blue": 0.2, "dark_green": 0.5},
         "dark_green": {"teal": 0.5, "light_blue": 0.1, "medium_blue": 0.2, "dark_green": 0.2},
         }
 })
     
-    # Start Painting 
-    painter.paint("sky")
-
+    # Start Painting by choosing a random object to start first
+    objects = ["sky", "ocean", "tree", "ground", "orange_bush", "green_bush", "yellow_bush"]
+    painter.paint(objects[randint(0,6)])
     
 if __name__ == "__main__":
     main()

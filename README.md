@@ -29,3 +29,5 @@ I believe that this system is creative. In the real world, a lot of art is inspi
 Turtle Documentation: https://docs.python.org/3/library/turtle.html#turtle.towards
 Keeping the Turtle Window Open: https://stackoverflow.com/questions/6234798/turtle-graphics-how-do-i-control-when-the-window-closes
 Markov Musician example we did in class 
+Randint: https://www.w3schools.com/python/ref_random_randint.asp
+
