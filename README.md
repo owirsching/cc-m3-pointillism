@@ -5,7 +5,7 @@ Computational Creativity Assignment M3.
 
 ![image](./Examples/OriginalPainting.png)
 
-Edmond Cross, Henri. Two Women by the Shore, Mediterranean. 1896. Turtle on screen, Oil on Canvas. The Barnes Foundation, Philadelphia.
+Edmond Cross, Henri. Two Women by the Shore, Mediterranean. 1896, Oil on Canvas. The Barnes Foundation, Philadelphia.
 
 This project generates a pointillist painting inspired by Henri Edmond Cross' "Two Women by the Shore, Mediterranean" using Markov Chains. This piece is an example of pointillism, where each brush stroke looks like a distinct point on the canvas. This project uses the Turtle library on a 300 x 300-pixel "canvas" to paint a piece that resembles Edmond Cross' original by using colors taken from the artwork and implementing pointillism by only printing distinct strokes on the screen.  
 
