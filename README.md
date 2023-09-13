@@ -17,4 +17,15 @@ Markov Chains determine which object will be painted next and which colors in th
 # Personal Meaning 
 I first saw Two Women by the Shore, Mediterranean in 2019 when visiting The Barnes Foundation in Philadelphia. I was immediately struck by the painting. The crisp imagery paired with the vibrant colors is captivating. I am not one to usually enjoy museums or buy anything from a gift store, but I loved this painting so much that I bought a scarf with the paiting and a miniature painting as well. The miniature has traveled with me up to Brunswick and is hanging in my room. 
 
-Every museum I have been to since, I always look to see if any of Edmond Cross' works are hanging on the walls. Even when I do find one, they are not as magical as this one. So, when thinking of a source of inspiration of visual art, I was immediately drawn to the idea of using this painting in some way. I am drawn both to the colors and the pointillism. So, I decided to have both of those features be the main focus of the project. Even though, the computer version does not completely capture the beauty of the original, it captures the essence of its composition. 
+Every museum I have been to since, I always look to see if any of Edmond Cross' works are hanging on the walls. Even when I do find one, they are not as magical as this one. So, when thinking of a source of inspiration of visual art, I was immediately drawn to the idea of using this painting in some way. My favorite part is the colors and the pointillism. So, I decided to have both of those features be the main focus of the project. Even though the computer version does not completely capture the beauty of the original, it captures the essence of its composition. 
+
+# Challenges
+My first challenge was understanding the Turtle library. I struggled understanding it in Intro CS and it seems that I still struggle with it now. After some trial and error, I was able to formulate two for-loops that draw circles (with no extra lines) and make sure there is even spacing between each dot in the circle. I also pushed myself by including a second markov chain. It took some time to wrap my head around how to form the second transition matrix based on the first transition matrix. Going forward, I would like to replace the circles with shapes that actually resemble their intended object (like creating a bush shape for the orange bush object).
+
+# Is this Creative?
+I believe that this system is creative. In the real world, a lot of art is inspired by past works and draws inspiration from them. Most people still classify those imitation pieces as creative, so this system would fall under the same disticntion. The only concern I have with creativity is the use of Markov Chains. Is that truly a creative system if it is depending on mathematical rules? However, some could argue that mathmematical rules are a form of creativity because those formulas were created by humans solving problems and generating a creative solution that did not exist before. 
+
+# Sources
+Turtle Documentation: https://docs.python.org/3/library/turtle.html#turtle.towards
+Keeping the Turtle Window Open: https://stackoverflow.com/questions/6234798/turtle-graphics-how-do-i-control-when-the-window-closes
+Markov Musician example we did in class 
