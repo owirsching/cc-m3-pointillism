@@ -7,6 +7,9 @@ This project generates a pointillist painting inspired by Henri Edmond Cross' "T
 
 Markov Chains determine which object will be painted next and which colors in the object's color profile will be used for each paint stroke in that object. 
 
+![image](./Examples/Example1.png)
+Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 1). 2023. Turtle on Screen. 
+
 # How to set up and run the code 
 1. Navigate to the cc-m3-pointillism folder
 2. Run 'python3 M3.py' in the terminal 
@@ -30,4 +33,5 @@ Turtle Documentation: https://docs.python.org/3/library/turtle.html#turtle.towar
 Keeping the Turtle Window Open: https://stackoverflow.com/questions/6234798/turtle-graphics-how-do-i-control-when-the-window-closes
 Markov Musician example we did in class 
 Randint: https://www.w3schools.com/python/ref_random_randint.asp
+Image in Markdown: https://stackoverflow.com/questions/41604263/how-do-i-display-local-image-in-markdown
 
