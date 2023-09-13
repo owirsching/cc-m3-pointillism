@@ -1,14 +1,22 @@
 ### Two Markov Chains by the Shore, Mediterranean 
 Computational Creativity Assignment M3. 
 
+## Original Painting 
+
+![image](./Examples/OriginalPaiting.png)
+
+Edmond Cross, Henri. Two Women by the Shore, Mediterranean. 1896. Turtle on screen, Oil on Canvas. The Barnes Foundation, Philadelphia.
+
 This project generates a pointillist painting inspired by Henri Edmond Cross' "Two Women by the Shore, Mediterranean" using Markov Chains. This piece is an example of pointillism, where each brush stroke looks like a distinct point on the canvas. This project uses the Turtle library on a 300 x 300-pixel "canvas" to paint a piece that resembles Edmond Cross' original by using colors taken from the artwork and implementing pointillism by only printing distinct strokes on the screen.  
 
 **Two Markov Chains by the Shore, Mediterranean** paints 500 circles with 10 brush strokes composing each circle. Each of these circles represents an object within Edmond Cross' painting (sky, ocean, tree, green bush, yellow bush, orange bush, or ground). Each object has a particular color profile. For example, the sky can be colored with light blue, medium blue, dusty pink, or light purple paints. The location of an object is restricted to its general location in the original painting (e.g. any sky circle can only be placed toward the top of the screen's canvas). These restrictions are hard-coded for each object. However, within each available area, the location of a circle object is randomly chosen. 
 
 Markov Chains determine which object will be painted next and which colors in the object's color profile will be used for each paint stroke in that object. 
 
+## Example Created by This System
 ![image](./Examples/Example1.png)
-Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 1). 2023. Turtle on Screen. 
+
+Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 1). 2023, Turtle on Screen. GitHub.
 
 # How to set up and run the code 
 1. Navigate to the cc-m3-pointillism folder
@@ -30,8 +38,12 @@ I believe that this system is creative. In the real world, a lot of art is inspi
 
 # Sources
 Turtle Documentation: https://docs.python.org/3/library/turtle.html#turtle.towards
+
 Keeping the Turtle Window Open: https://stackoverflow.com/questions/6234798/turtle-graphics-how-do-i-control-when-the-window-closes
+
 Markov Musician example we did in class 
+
 Randint: https://www.w3schools.com/python/ref_random_randint.asp
+
 Image in Markdown: https://stackoverflow.com/questions/41604263/how-do-i-display-local-image-in-markdown
 
