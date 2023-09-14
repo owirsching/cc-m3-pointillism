@@ -3,7 +3,7 @@ Computational Creativity Assignment M3.
 
 ## Description 
 
-![image](./Examples/OriginalPainting.png)
+![image](./Assets/OriginalPainting.png)
 
 _Edmond Cross, Henri. Two Women by the Shore, Mediterranean. 1896, Oil on Canvas. The Barnes Foundation, Philadelphia._
 
