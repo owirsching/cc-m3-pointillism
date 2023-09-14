@@ -1,7 +1,7 @@
 # Two Markov Chains by the Shore, Mediterranean 
 Computational Creativity Assignment M3. 
 
-## Original Painting 
+## Description 
 
 ![image](./Examples/OriginalPainting.png)
 
