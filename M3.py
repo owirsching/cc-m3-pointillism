@@ -64,9 +64,7 @@ class Painter:
         Paints image on a virtual canvas using turtle
         Parameters: self (Painter object), current_object (string)
         """
-        # Start with the object as sky
-        current_object="sky"
-
+        
         # For 500 object circles
         for _ in range (0,500):
             # Pick type of object (tree, bush, ocean, ...)
