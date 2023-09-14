@@ -26,7 +26,7 @@ _Wirsching, Olivia. Two Markov Chains by the Shore, Mediterranean (Example 4). 2
 3. Download packages random, time, turtle, and numpy in the terminal
 4. Run 'python3 M3.py' in the terminal 
 5. A window should appear and the painting will begin 
-6. Wait a long time. The painting is ready when the black triangle stops flashing in the middle. 
+6. Wait a long time (around 13 minutes). The painting is ready when the black triangle stops flashing in the middle. 
 7. The window will stay open for 15 seconds after the completion of the painting before closing automatically. 
 
 ## Personal Meaning 
@@ -38,7 +38,7 @@ In every museum I have been to since I always look to see if any of Edmond Cross
 My first challenge was understanding the Turtle Library. I struggled to understand it in Intro CS and it seems I still struggle with it now. After some trial and error, I was able to formulate two for-loops that draw circles (with no extra lines) and make sure there is even spacing between each dot in the circle. I also pushed myself by including a second Markov chain. It took some time to wrap my head around forming the second transition matrix based on the first transition matrix. Going forward, I would like to replace the circles with shapes that actually resemble their intended object (like creating a bush shape for the orange bush object).
 
 ## Is this Creative?
-I believe that this system is creative. In the real world, a lot of art is inspired by past works and draws inspiration from them. Most people still classify those imitation pieces as creative, so this system would fall under the same distinction. The only concern I have with creativity is the use of Markov Chains. Is that truly a creative system if it depends on mathematical rules? However, some could argue that mathematical rules are a form of creativity because those formulas were created by humans solving problems and generating creative solutions that did not exist before. 
+I believe that this system is creative. In the real world, a lot of art is inspired by past works and draws inspiration from them. Most people still classify those imitation pieces as creative, so this system would fall under the same distinction. By the definition we created in class, this system is also classified as creative. Each painting is novel given the random nature of deciding the location and colors of each circle. The paintings are also valuable because I get enjoyment from looking at them. The only concern I have with creativity is the use of Markov Chains. Is that truly a creative system if it depends on mathematical rules? However, some could argue that mathematical rules are a form of creativity because those formulas were created by humans solving problems and generating creative solutions that did not exist before.  
 
 ## Sources
 Turtle Documentation: https://docs.python.org/3/library/turtle.html#turtle.towards
